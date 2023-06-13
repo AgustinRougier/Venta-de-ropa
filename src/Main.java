@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("\nQue tipo de prenda le gustaria llevar?");
@@ -20,6 +21,7 @@ public class Main {
                     System.out.println("\n2.Manga larga");
                     System.out.println("\n3.Sin manga\n");
                     int camisaOpcion = 0;
+                    int opcionPago = scanner.nextInt();
                     while (camisaOpcion == 0) {
                         String camisaEntrada = scanner.nextLine();
                         switch (camisaEntrada.toLowerCase()) {
@@ -32,7 +34,21 @@ public class Main {
                                 System.out.println("\nLa camisa manga corta" + colorCamisa + " " + tallaCamisa + " se agregó al carrito de compras.");
                                 camisaOpcion = 1;
 
+                                System.out.println("\n¿Le gustaria seguir comprando o quiere proceder a pagar la compra?");
+                                System.out.println("\n1.Seguir comprando");
+                                System.out.println("\n2.Pagar lo que llevo\n");
+
+                                if (opcionPago == 1) {
+                                    System.out.println("\n¿Que otra cosa le gustaria comprar?\n");
+                                    opcion = 0;
+                                } else if (opcionPago == 2) {
+                                    System.out.println("\n¿Que metodo de compra le gustaria usar?\n");
+                                    opcion = 1;
+                                } else {
+                                    System.out.println("\nPor favor eliga una de las opciones presentadas\n");
+                                }
                                 break;
+
                             case "2":
                                 System.out.println("\nEligió: manga larga");
                                 System.out.println("\n¿De que color le gustaria que fuera la camisa?\n");
@@ -41,7 +57,23 @@ public class Main {
                                 String tallaCamisa2 = scanner.nextLine();
                                 System.out.println("\nLa camisa manga larga" + colorCamisa2 + " " + tallaCamisa2 + " se agregó al carrito de compras.");
                                 camisaOpcion = 1;
+
+                                System.out.println("\n¿Le gustaria seguir comprando o quiere proceder a pagar la compra?");
+                                System.out.println("\n1.Seguir comprando");
+                                System.out.println("\n2.Pagar lo que llevo\n");
+
+                                if (opcionPago == 1) {
+                                    System.out.println("\n¿Que otra cosa le gustaria comprar?\n");
+                                    opcion = 0;
+                                } else if (opcionPago == 2) {
+                                    System.out.println("\n¿Que metodo de compra le gustaria usar?\n");
+                                    opcion = 1;
+                                } else {
+                                    System.out.println("\nPor favor eliga una de las opciones presentadas\n");
+                                }
                                 break;
+                                System.out.println("\nPor favor eliga una de las opciones presentadas\n");
+
                             case "3":
                                 System.out.println("\nEligió: sin manga");
                                 System.out.println("\n¿De que color le gustaria que fuera la camisa?\n");
@@ -51,13 +83,9 @@ public class Main {
                                 System.out.println("\nLa camisa sin manga" + colorCamisa3 + " " + tallaCamisa3+ " se agregó al carrito de compras.");
                                 camisaOpcion = 1;
 
-                                System.out.println("\nPor favor eliga una de las opciones presentadas\n");{
-
                                 System.out.println("\n¿Le gustaria seguir comprando o quiere proceder a pagar la compra?");
                                 System.out.println("\n1.Seguir comprando");
                                 System.out.println("\n2.Pagar lo que llevo\n");
-
-                                int opcionPago = scanner.nextInt();
 
                                 if (opcionPago == 1) {
                                     System.out.println("\n¿Que otra cosa le gustaria comprar?\n");
